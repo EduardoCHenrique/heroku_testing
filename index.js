@@ -20,15 +20,15 @@ var app = express();
 
 var connection = mysql.createConnection({
   host     : 'us-cdbr-iron-east-04.cleardb.net',
-  user     : 'be9d41e962e89d',
-  password : 'eeb022b7',
-  database : 'heroku_ab7c55c476b592d'
+  user     : 'bd868e046ae1a7',
+  password : '1d20704a',
+  database : 'heroku_478da0ff4b598a5'
 });
 
 connection.connect();
-
 app.get('/', function(request, response) {
-  connection.query('SELECT * from t_users', function(err, rows, fields) {
+  connection.query('SHOW TABLES', function(err, rows, fields) {
+      console.log('deu certo');
       if (err) {
         console.log('error: ', err);
         throw err;
