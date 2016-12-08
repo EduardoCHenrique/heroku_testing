@@ -7,6 +7,7 @@ app.get('/', function(req, res) {
   console.log('requisição de teste');
   res.send('deu certo ae mano')
 });
-app.listen(proccess.env.port || 3332, function() {
+
+app.listen(process.env.port || 3332, function() {
   console.log('Rodando na porta 3332');
 })
