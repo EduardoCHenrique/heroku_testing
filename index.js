@@ -20,8 +20,8 @@ var app = express();
 
 var connection = mysql.createConnection({
   host     : 'us-cdbr-iron-east-04.cleardb.net',
-  user     : 'bd868e046ae1a7',
-  password : '1d20704a',
+  user     : 'be9d41e962e89d',
+  password : 'eeb022b7',
   database : 'heroku_ab7c55c476b592d'
 });
 
