@@ -25,10 +25,12 @@ var connection = mysql.createConnection({
   database : 'heroku_478da0ff4b598a5'
 });
 
-connection.connect();
+connection.connect(function(err) {
+  console.log(err); // 'ECONNREFUSED'
+});
 app.get('/', function(request, response) {
   connection.query('SHOW TABLES', function(err, rows, fields) {
-      console.log('deu certo');
+      console.log('deu certo', err, rows, fields);
       if (err) {
         console.log('error: ', err);
         throw err;
