@@ -8,6 +8,6 @@ app.get('/', function(req, res) {
   res.send('deu certo ae mano')
 });
 
-app.listen(process.env.port || 3332, function() {
+app.listen(process.env.PORT || 3332, function() {
   console.log('Rodando na porta 3332');
 })
